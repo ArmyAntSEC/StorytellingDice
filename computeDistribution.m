@@ -7,4 +7,6 @@ function [distribution] = computeDistribution( difficulty, numberOfDice, ...
         index = result + 1;
         distribution(index) = distribution(index) + 1;
     end
+
+    distribution = distribution / sum(distribution);
 end
